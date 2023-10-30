@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PACMAN チュートリアル</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tutorial.css">
+    <script src="tutorial.js" defer></script>
+</head>
+<body>
+    <div class="fast">
+        <button onclick="turoeial()">チュートリアル開始</button>
+    </div>
+    <table id="maze" class="sp300">
+        <!-- 迷路の描画はここに生成する -->
+    </table>
+    <div class="borad">
+        <ol>
+            <li>
+                <img src="image/pacman.gif" alt="">
+                <span>あなたの操作するキャラクターです!</span>
+            </li>
+            <li>
+                <img src="image/30-cute-ghost-looking-around.gif" alt="">
+                <span>あなたを追ってくる幽霊たちです!</span>
+            </li>
+            <li>
+                <div class="wall"></div>
+                <span>壁です。通過できません!</span>
+            </li>
+            <li>
+                <img src="image/point.png" alt="">
+                <span>食べると50ポイントを獲得できます!</span>
+            </li>
+            <li>
+                <img src="image/1200_dotto-e.com_0007.png" alt="">
+                <span>食べると500ポイントを獲得できます!</span>
+            </li>
+        </ol>
+        <p>
+            WASDまたは↑←↓→キーで操作可能です。<br>
+            ※wasdおよび十字キーは同時押ししないでください。(同時に押すと動きません)<br>
+            幽霊(<img src="image/30-cute-ghost-looking-around.gif" alt="">)から逃げてみましょう。<br>
+            チュートリアルでは幽霊に追いつかれてもゲームオーバーにはなりません。<br>
+            残り01:00になると、全てのポイントがイチゴになるフィーバータイムがあります。<br>
+            難易度によってポイントの比率、幽霊の移動速度が変わります(normal→50pt、Hard→62pt)<br>
+            ランキング上位を目指して頑張ってください！！
+        </p>
+    </div>
+    <div class="character_img">
+        <img src="image/pacman.gif" alt="">
+    </div>
+    <div class="ghost_img">
+        <img src="image/30-cute-ghost-looking-around.gif" alt="">
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+* {
+    font-size: 10px;
+}
+.fast {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    z-index: 9999;
+    box-sizing: border-box;
+}
+.fast button {
+    color: #000;
+}
+.wall {
+    width: 20px;
+    height: 20px;
+}
+.borad {
+    color: #fff;
+}
+ol,ul {
+    list-style: none;
+}
+.borad img {
+    width: 20px;
+    height: 20px;
+}

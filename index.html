@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PacMan</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="image/Pac-Man0.png">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="title">
+        <div>
+            <h1>
+                PacMan<br>
+            </h1>
+            <iframe src="tutorial.html" frameborder="0" width="1002px" height="332px"></iframe>
+        </div>
+    </div>
+    <div class="count_down close">
+        <span class="number">5</span>
+    </div>
+    <table id="maze">
+        <!-- 迷路の描画はここに生成する -->
+    </table>
+    <div class="character_img">
+        <img src="image/pacman.gif" alt="">
+    </div>
+    <div class="ghost21_img ghost_img">
+        <img src="image/58-ghost-running.gif" alt="">
+    </div>
+    <div class="ghost22_img ghost_img">
+        <img src="image/58-ghost-running.gif" alt="">
+    </div>
+    <div class="ghost23_img ghost_img">
+        <img src="image/58-ghost-running.gif" alt="">
+    </div>
+    <div class="ghost24_img ghost_img">
+        <img src="image/58-ghost-running.gif" alt="">
+    </div>
+    <div class="borad">
+        <div class="top">
+            <div class="guest" onclick="chengeUser(1)">ゲストでプレイ<br>(入口で名前を入力していない方)</div>
+            <h1><span>無料</span>でできる<br>愉快で楽しい<br>パックマン！<br>VRもあるよ！</h1>
+            <div class="pleyer" onclick="chengeUser(2)">名前でプレイ<br>(入口で名前を入力した方)</div>
+        </div>
+        <div class="login">
+            <label for="name">名前：</label><input id="name" style="color: #000;" type="text">
+            <button class="submit" style="color: #000;" onclick="userSearch()">決定</button>
+            <p class="message"></p>
+        </div>
+        <div>
+            ステージ：<select name="" id="select_stage" style="color: #000;" required>
+                <option value="0" style="color: #000;" selected>0</option>
+                <option value="1" style="color: #000;">1</option>
+            </select><br>
+            <!-- ゴースト：<select name="" id="select_ghosts"  style="color: #000;" disabled>
+                <option value="3" style="color: #000;">1</option>
+                <option value="2" style="color: #000;">2</option>
+                <option value="1" style="color: #000;">3</option>
+                <option value="0" style="color: #000;" selected>4</option>
+            </select><br> -->
+            速度：<select name="" id="select_speeds"  style="color: #000;">
+                <option value="400" style="color: #000;">Easy(遅い)</option>
+                <option value="300" style="color: #000;" selected>normal(よい遅さ)</option>
+                <option value="275" style="color: #000;">Hard(少し遅い)</option>
+                <option value="250" style="color: #000;">Very-Hard(同じ)</option>
+                <option value="225" style="color: #000;">Super-Hard(早い)</option>
+            </select><br>
+            <button id="start" onclick="addEvent()"  style="color: #000;">==Start==</button><br>
+        </div>
+        <div>
+            <b>時  間 </b>== <span class="time">03:00</span> ==<br>
+            <b>スコア </b>== <span class="score">00000</span> ==
+        </div>
+    </div>
+    <div class="game_set close">
+        <h1>GAME OVER</h1>
+        <p>
+            <b>等級：「<span class="level"></span>」</b><br>
+            <b>獲得スコア：「  </b><span class="scoreLast"></span>  」<br>
+            <b>残り時間：「  </b><span class="timeLast"></span>  」<br>
+            <b>"<span class="name"></span>"さんは、<span class="low_count">00</span>個のPポイントと、<span class="high_count">00</span>個のイチゴを食べました！</b>
+        </p>
+        <a href="file:///C:/Users/suzuk/Desktop/pacman-test/index.html">
+            <button  style="color: #000;"  class="reload">ホームに戻る</button>
+        </a>
+    </div>
+</body>
+</html>
