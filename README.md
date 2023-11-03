@@ -2,7 +2,7 @@
 
 # このアプリについて
 
-- パックマンアプリのようなアプリです。[APIサーバー](https://github.com/nonnhjleno/bunkasai2023)がないと動きません。
+- パックマンのようなアプリです。[APIサーバー](https://github.com/nonnhjleno/bunkasai2023)がないと動きません。
 
 # Author
 
