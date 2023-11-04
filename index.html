@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="icon" type="image/png" href="image/Pac-Man0.png">
     <script src="script.js" defer></script>
 </head>
+
 <body>
     <div class="title">
         <div>
@@ -38,7 +40,7 @@
     <div class="ghost24_img ghost_img">
         <img src="image/58-ghost-running.gif" alt="">
     </div>
-    <div class="borad">
+    <div class="board">
         <div class="top">
             <div class="guest" onclick="chengeUser(1)">ゲストでプレイ<br>(入口で名前を入力していない方)</div>
             <h1><span>無料</span>でできる<br>愉快で楽しい<br>パックマン！<br>VRもあるよ！</h1>
@@ -60,17 +62,17 @@
                 <option value="1" style="color: #000;">3</option>
                 <option value="0" style="color: #000;" selected>4</option>
             </select><br> -->
-            速度：<select name="" id="select_speeds"  style="color: #000;">
+            速度：<select name="" id="select_speeds" style="color: #000;">
                 <option value="400" style="color: #000;">Easy(遅い)</option>
                 <option value="300" style="color: #000;" selected>normal(よい遅さ)</option>
                 <option value="275" style="color: #000;">Hard(少し遅い)</option>
                 <option value="250" style="color: #000;">Very-Hard(同じ)</option>
                 <option value="225" style="color: #000;">Super-Hard(早い)</option>
             </select><br>
-            <button id="start" onclick="addEvent()"  style="color: #000;">==Start==</button><br>
+            <button id="start" onclick="addEvent()" style="color: #000;">==Start==</button><br>
         </div>
         <div>
-            <b>時  間 </b>== <span class="time">03:00</span> ==<br>
+            <b>時 間 </b>== <span class="time">03:00</span> ==<br>
             <b>スコア </b>== <span class="score">00000</span> ==
         </div>
     </div>
@@ -78,11 +80,13 @@
         <h1>GAME OVER</h1>
         <p>
             <b>等級：「<span class="level"></span>」</b><br>
-            <b>獲得スコア：「  </b><span class="scoreLast"></span>  」<br>
-            <b>残り時間：「  </b><span class="timeLast"></span>  」<br>
-            <b>"<span class="name"></span>"さんは、<span class="low_count">00</span>個のPポイントと、<span class="high_count">00</span>個のイチゴを食べました！</b>
+            <b>獲得スコア：「 </b><span class="scoreLast"></span> 」<br>
+            <b>残り時間：「 </b><span class="timeLast"></span> 」<br>
+            <b>"<span class="name"></span>"さんは、<span class="low_count">00</span>個のPポイントと、<span
+                    class="high_count">00</span>個のイチゴを食べました！</b>
         </p>
         <button style="color: #000;" class="reload" onclick="handleReload()">ホームに戻る</button>
     </div>
 </body>
+
 </html>
