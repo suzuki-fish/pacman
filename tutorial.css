@@ -1,5 +1,5 @@
 * {
-    font-size: 10px;
+    font-size: 15px;
 }
 .fast {
     position: absolute;
@@ -20,7 +20,9 @@
     height: 20px;
 }
 .board {
+    margin-top: 20px;
     color: #fff;
+    display: none;
 }
 ol,ul {
     list-style: none;
