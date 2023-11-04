@@ -211,7 +211,6 @@ for (let row = 0; row < numRows; row++) {
     let count = 0;
     function turoeial() {
       fast.style.display = 'none';
-      document.querySelector('.board').style.display = 'flex';
       if (count == 0) {
         count++;
         // setTimeout(() => {

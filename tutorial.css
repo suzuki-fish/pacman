@@ -1,5 +1,5 @@
 * {
-    font-size: 15px;
+    font-size: 10px;
 }
 .fast {
     position: absolute;
@@ -19,15 +19,13 @@
     width: 20px;
     height: 20px;
 }
-.board {
-    margin-top: 20px;
+.borad {
     color: #fff;
-    display: none;
 }
 ol,ul {
     list-style: none;
 }
-.board img {
+.borad img {
     width: 20px;
     height: 20px;
 }
