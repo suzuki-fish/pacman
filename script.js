@@ -82,8 +82,8 @@ async function userSearch () {
         const query = {
           username: username,
         }
-        await fetch(`http://${server_IP}/api/createUser?username=${username}`,{
-          // await fetch(`http://${local_IP}/api/createUser?username=${username}`,{
+        // await fetch(`http://${server_IP}/api/createUser?username=${username}`,{
+          await fetch(`http://${local_IP}/api/createUser?username=${username}`,{
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -110,8 +110,8 @@ async function userSearch () {
     } else if (playStyle == 'named') {
       try { 
         submit.disabled = true; 
-         await fetch(`http://${server_IP}/api/searchUser?username=${username}`).then((response) => response.json()).then((data) => {
-        //  await fetch(`http://${local_IP}/api/searchUser?username=${username}`).then((response) => response.json()).then((data) => {
+        //  await fetch(`http://${server_IP}/api/searchUser?username=${username}`).then((response) => response.json()).then((data) => {
+         await fetch(`http://${local_IP}/api/searchUser?username=${username}`).then((response) => response.json()).then((data) => {
             console.log(data);
             message.addEventListener('click',() => {
               textBox.value = data[0].username;
@@ -672,8 +672,8 @@ function addEvent() {
           const query = {
               score: score,
           }
-          await fetch(`http://${server_IP}/api/updateScore/${id}`,{
-            // await fetch(`http://${local_IP}/api/updateScore/${id}`,{
+          // await fetch(`http://${server_IP}/api/updateScore/${id}`,{
+            await fetch(`http://${local_IP}/api/updateScore/${id}`,{
               method: "PUT",
               headers: {
                   "Content-Type": "application/json",
@@ -746,4 +746,8 @@ function addEvent() {
     }
     setUp(0);
   }, 5000);
+}
+
+const handleReload = () => {
+  window.location.reload();
 }
