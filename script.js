@@ -747,3 +747,7 @@ function addEvent() {
     setUp(0);
   }, 5000);
 }
+
+const handleReload = () => {
+  window.location.reload();
+}
