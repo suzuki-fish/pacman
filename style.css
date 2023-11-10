@@ -150,6 +150,9 @@
   select {
     height: 22px;
   }
+  .title h1{
+    margin-bottom: 5px;
+  }
   .title,
   .count_down{
     width: 100%;
