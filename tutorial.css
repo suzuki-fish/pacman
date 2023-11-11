@@ -1,5 +1,6 @@
 * {
-    font-size: 10px;
+    margin: 0;
+    font-size: 15px;
 }
 .fast {
     position: absolute;
@@ -20,7 +21,17 @@
     height: 20px;
 }
 .borad {
+    margin-top: 10px;
     color: #fff;
+    min-width: 950px;
+}
+.borad p{
+    width: fit-content;
+    padding: 5px;
+}
+ol{
+    padding: 0;
+    margin: 0;
 }
 ol,ul {
     list-style: none;
@@ -28,4 +39,9 @@ ol,ul {
 .borad img {
     width: 20px;
     height: 20px;
+}
+
+.character_img{
+    top: 23.2p;
+    left: 458.8px;
 }
