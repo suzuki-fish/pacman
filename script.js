@@ -69,14 +69,14 @@ let highCount = 0;
 let lowCount = 0;
 const level = document.querySelector('.level');
 let usernamed;
+const textBox = document.getElementById('name');
 console.log('動いてます');
 
 //ユーザー検索、ゲストアカウントの作成
 async function userSearch () {
-  const textBox = document.getElementById('name');
   let username = textBox.value;
   submit.disabled = true;
-  console.log('ｊだｐｆｊ');
+  // console.log('ｊだｐｆｊ');
     if (playStyle == 'guest') {
       try {
         const query = {
@@ -129,8 +129,9 @@ async function userSearch () {
               startBtn.disabled = true;
             }
             return idNumber = data[0].id;
-          }).catch(() => {
+          }).catch((error) => {
             startBtn.disabled = true;
+            console.log(error);
             console.log(`「${username}」は見つかりませんでした。`);
             message.innerHTML = `${username}は見つかりませんでした。`;
           })
@@ -138,7 +139,10 @@ async function userSearch () {
       } catch(error) {
         console.log(error);
       }
-     
+    } else {
+      startBtn.disabled = false;
+      submit.disabled = true;
+      message.innerHTML = `ようこそ「${textBox.value}」さん。startを押してゲームを始めてください。`;
     }
 }
 
@@ -148,9 +152,11 @@ let playStyle;
 //playStyleの変更(アカウントを作成してやるか、入場した時に作成したアカウントでやるか)
 function chengeUser(num) {
   if (num == 1) {
-    playStyle = 'guest'; //アカウント作成します
+    playStyle = 'guest'; // アカウント作成します
+  } else if (num == 2) {
+    playStyle = 'named'; // 名前入力します
   } else {
-    playStyle = 'named'; //名前入力します
+    playStyle = 'play'; // ただ遊ぶモード
   }
   fastContent.style.display = 'none';
 }
@@ -714,9 +720,13 @@ function addEvent() {
           if (timeNum == 0) {
             gameSet.querySelector('h1').innerHTML = '＼＼GAME CLEAR／／';
           }
-          putData(idNumber,scoreNum);
+          if (playStyle !== 'play') {
+            putData(idNumber,scoreNum);
+            document.querySelector('.name').innerHTML = usernamed;
+          } else {
+            document.querySelector('.name').innerHTML = `${textBox.value}`;
+          }
           gameSet.classList.remove('close');
-          document.querySelector('.name').innerHTML = usernamed;
           document.querySelector('.high_count').innerHTML = highCount;
           document.querySelector('.low_count').innerHTML = lowCount;
           gameSet.querySelector('.timeLast').innerHTML =  `${( '00' + Math.floor(timeNum / 60) ).slice( -2 )}：${( '00' + (timeNum % 60) ).slice( -2 )}`;

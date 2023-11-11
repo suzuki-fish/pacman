@@ -124,13 +124,21 @@
     background-color: #fff;
     color: #000;
   }
-  .borad {
+  .board {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    margin-top: 10px;
     padding: 2px;
     border: 1px solid #fff;
     color: #000;
+  }
+  .board > ol li:nth-child(3) {
+    display: flex;
+    align-items: center;
+  }
+  #wall{
+    margin-right: 10px;
   }
   .game_set {
     width: 100%;
@@ -149,6 +157,9 @@
   }
   select {
     height: 22px;
+  }
+  .title h1{
+    margin-bottom: 5px;
   }
   .title,
   .count_down{
